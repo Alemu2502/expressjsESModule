@@ -16,7 +16,7 @@ const MONG_url = process.env.MONG_url || 'mongodb://localhost:27017/alxTasks';
 const connectDB = async()=> {
     try {
         await mongoose.connect(MONG_url);
-        console.log(`mongodb successfully connected on ${PORT}`);
+        console.log("mongodb successfully connected");
     } catch (error) {
         console.log('mongodb not connected');
     }
@@ -41,7 +41,7 @@ try {
 }));
 
 app.listen(PORT, ()=>{
-    console.log('server connected successfully');
+    console.log(`server connected successfully on ${PORT}`);
 });
 
 app.use((req, res)=>{
